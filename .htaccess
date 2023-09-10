@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^index.html$ https://ichilab.glide.page/ [L,R=301]
