@@ -1,5 +1,5 @@
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
-Redirect permanent https://ichilab.biz https://ichilab.glide.page
+Redirect permanent index.html https://ichilab.glide.page
 order deny,allow
