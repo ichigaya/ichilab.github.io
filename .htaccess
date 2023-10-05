@@ -3,3 +3,19 @@ deny from all
 </Files>
 Redirect permanent index.html https://ichilab.glide.page
 order deny,allow
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} (iPhone|Android.*Mobile) [NC]
+RewriteRule ^(.*)$ /sp/$1 [R,L]
+</IfModule>
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !\.(css|js|jpg|jpeg|gif|png|xml)$ [NC]
+RewriteRule ^(.+)\.(.+)$ $1\.html
+
+
+
+RewriteEngine on
+RewriteBase /
